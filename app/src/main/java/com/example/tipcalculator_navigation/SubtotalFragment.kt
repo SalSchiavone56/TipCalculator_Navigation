@@ -72,9 +72,11 @@ class SubtotalFragment : Fragment() {
             }
         }
         binding.backspaceButton.setOnClickListener{view->
-            subtotal /= 10
-            binding.subtotalCount.text="$${subtotal}.00"
-            numbersPicked.removeLast()
+            if(subtotal != 0) {
+                subtotal /= 10
+                binding.subtotalCount.text = "$${subtotal}.00"
+                numbersPicked.removeLast()
+            }
         }
         return rootview
     }

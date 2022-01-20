@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.tipcalculator_navigation.databinding.FragmentFinalTotalBinding
+import kotlin.math.round
 import com.example.tipcalculator_navigation.databinding.FragmentSubtotalBinding
 
 class FinalTotalFragment : Fragment() {
@@ -21,13 +22,13 @@ class FinalTotalFragment : Fragment() {
         val rootview= binding.root
         val args=FinalTotalFragmentArgs.fromBundle(requireArguments())
         val owe=args.finalTotalArg.toDouble()/args.numGuestsArg
-        binding.subtotalTipText.text="$${args.finalTotalArg.toDouble()}"
-        binding.everybodyOwesText.text="$${owe}"
+        binding.subtotalTipText.text="$${round(args.finalTotalArg.toDouble()*100)/100}"
+        binding.everybodyOwesText.text="$${round(owe*100)/100}"
         binding.roundUpButton.setOnClickListener{view->
-            binding.everybodyOwesText.text="$${Math.ceil(owe)}"
+            binding.everybodyOwesText.text="$${Math.ceil(owe)}0"
         }
         binding.roundDownButton.setOnClickListener{view->
-            binding.everybodyOwesText.text="$${Math.floor(owe)}"
+            binding.everybodyOwesText.text="$${Math.floor(owe)}0"
         }
         return rootview
     }

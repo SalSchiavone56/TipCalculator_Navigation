@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/subtotal_fragment">
+
+    <fragment
+        android:id="@+id/subtotal_fragment"
+        android:name="com.example.tipcalculator_navigation.SubtotalFragment"
+        android:label="Some Fragment"
+        tools:layout="@layout/fragment_subtotal">
+        <action
+            android:id="@+id/action_subtotal_fragment_to_tipFragment"
+            app:destination="@id/tipFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tipFragment"
+        android:name="com.example.tipcalculator_navigation.TipFragment"
+        android:label="TipFragment"
+        tools:layout="@layout/fragment_tip">
+        <action
+            android:id="@+id/action_tipFragment_to_finalTotalFragment"
+            app:destination="@id/finalTotalFragment" />
+        <argument
+            android:name="subtotalArg"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalTotalFragment"
+        android:name="com.example.tipcalculator_navigation.FinalTotalFragment"
+        android:label="FinalTotalFragment"
+        tools:layout="@layout/fragment_final_total">
+        <argument
+            android:name="finalTotalArg"
+            app:argType="float" />
+        <argument
+            android:name="numGuestsArg"
+            app:argType="integer" />
+    </fragment>
+</navigation>

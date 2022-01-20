@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">TipCalculator_Fragments</string>
+    <string-array name="num_of_guests">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+    <string name="subtotal_title">Subtotal:</string>
+    <string name="calc1">1</string>
+    <string name="calc2">2</string>
+    <string name="calc3">3</string>
+    <string name="calc4">4</string>
+    <string name="calc5">5</string>
+    <string name="calc6">6</string>
+    <string name="calc7">7</string>
+    <string name="calc8">8</string>
+    <string name="calc9">9</string>
+    <string name="calc0">0</string>
+    <string name="final_price">Subtotal Plus Tip: </string>
+    <string name="people_owe">Each Person Owes: </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
